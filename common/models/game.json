@@ -2,6 +2,7 @@
   "name": "game",
   "base": "PersistedModel",
   "idInjection": true,
+  "scopes": {},
   "options": {
     "validateUpsert": true
   },
@@ -12,9 +13,6 @@
     "mature": {
       "type": "boolean"
     }
-  },
-  "scopes": {
-    "mature": {"where": {"mature": true}}
   },
   "validations": [],
   "relations": {
