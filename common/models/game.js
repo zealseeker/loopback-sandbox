@@ -5,6 +5,9 @@ module.exports = function(Game) {
       callback(null);
     } else {
       console.log("Mature is ", isMature);
+      //when use the latest 'strong-remoting' 2.23.0,
+      //it logs "Mature is true"
+      //while 'strong-remoting' 2.22.0 logs "Mature is false"
       callback(null);
     }
   }
