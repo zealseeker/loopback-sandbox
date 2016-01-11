@@ -1,23 +1,17 @@
 {
-  "name": "category",
+  "name": "appointment",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string"
+    "appointmentDate": {
+      "type": "date"
     }
   },
   "validations": [],
-  "relations": {
-    "games": {
-      "type": "hasMany",
-      "model": "game",
-      "foreignKey": ""
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

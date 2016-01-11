@@ -32,15 +32,31 @@
     "dataSource": "db",
     "public": false
   },
-  "category": {
+  "patient": {
     "dataSource": "db",
     "public": true
   },
-  "game": {
+  "physician": {
     "dataSource": "db",
     "public": true
   },
-  "player": {
+  "appointment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "space": {
+    "dataSource": "db",
+    "public": true
+  },
+  "account": {
+    "dataSource": "db",
+    "public": true
+  },
+  "customer": {
+    "dataSource": "db",
+    "public": true
+  },
+  "spaceCustomer": {
     "dataSource": "db",
     "public": true
   }

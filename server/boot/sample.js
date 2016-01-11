@@ -1,39 +1,24 @@
 module.exports = function(app, done) {
-  var Category = app.models.category;
-  var Game = app.models.game;
+  var Space = app.models.space;
+  var Customer = app.models.customer;
+  var Account = app.models.account;
+  var SpaceCustomer = app.models.spaceCustomer;
 
-  Category.create({name: 'cate1'}, function(err, category) {
-    if (err) console.log(err);
-    console.log('Created Category >>>', category);
-
-    category.games.create([
-    {
-        name: 'game1',
-        mature: 'true'
-    },
-    {
-    	  name: 'game2',
-    	  mature: 'false'
-    }
-    ], function(err, games) {
-       if (err) console.error(err);
-       console.log('Created games >>>', games);
-       Game.find({
-       	"where": {
-       		categoryId: 1,
-       		mature: true
-       	}
-       }, function(err, result) {
-       	  if (err) console.log(err);
-       	  // The query in code is equivalent to
-       	  // endpoint 'http://localhost:3000/api/categories/1/games?filter[where][mature]=true'
-       	  console.log('Result of endpoint >>>', result);
-       	  done(null);
-       });
-
-       games[0].players.create({name: 'player1'}, function(err, player) {
-         console.log('Created player >>>', player);
-       });
+  Space.create({name: "space1"}, function(err, space) {
+    Customer.create([{
+      name: "zoe"
+    }, {
+      name: "jelly"
+    }, {
+      name: "janny"
+    }], function(err, customers){
+      customers.forEach(function(customer) {
+        space.customers.add(customer, function(err) {
+          if (err) console.error(err);
+        });
+      });
+      done();
     });
   });
+
 }

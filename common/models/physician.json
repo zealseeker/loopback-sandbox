@@ -1,5 +1,5 @@
 {
-  "name": "player",
+  "name": "physician",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,13 +11,7 @@
     }
   },
   "validations": [],
-  "relations": {
-    "game": {
-      "type": "belongsTo",
-      "model": "game",
-      "foreignKey": ""
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }
