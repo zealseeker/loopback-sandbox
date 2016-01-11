@@ -1,5 +1,5 @@
 {
-  "name": "space",
+  "name": "city",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -12,14 +12,9 @@
   },
   "validations": [],
   "relations": {
-    "customers": {
-      "type": "hasAndBelongsToMany",
-      "model": "customer",
-      "through": "spaceCustomer"
-    },
-    "city": {
-      "type": "belongsTo",
-      "model": "city",
+    "spaces": {
+      "type": "hasMany",
+      "model": "space",
       "foreignKey": ""
     }
   },
