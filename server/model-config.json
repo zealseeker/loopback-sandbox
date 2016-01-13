@@ -43,5 +43,9 @@
   "agent": {
     "dataSource": "db",
     "public": true
+  },
+  "test": {
+    "dataSource": "db",
+    "public": true
   }
 }
