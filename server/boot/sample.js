@@ -1,39 +1,34 @@
 module.exports = function(app, done) {
-  var Category = app.models.category;
-  var Game = app.models.game;
+  var Store = app.models.store;
+  var Customer = app.models.customer;
+  var Agent = app.models.agent;
 
-  Category.create({name: 'cate1'}, function(err, category) {
-    if (err) console.log(err);
-    console.log('Created Category >>>', category);
+  Customer.create([{
+    name: 'Prime Ltd'
+  }, {
+    name: 'Client Ltd'
+  }], function(err, customers) {
+    console.log('Created customer>>>', customers);
 
-    category.games.create([
-    {
-        name: 'game1',
-        mature: 'true'
-    },
-    {
-    	  name: 'game2',
-    	  mature: 'false'
-    }
-    ], function(err, games) {
-       if (err) console.error(err);
-       console.log('Created games >>>', games);
-       Game.find({
-       	"where": {
-       		categoryId: 1,
-       		mature: true
-       	}
-       }, function(err, result) {
-       	  if (err) console.log(err);
-       	  // The query in code is equivalent to
-       	  // endpoint 'http://localhost:3000/api/categories/1/games?filter[where][mature]=true'
-       	  console.log('Result of endpoint >>>', result);
-       	  done(null);
-       });
-
-       games[0].players.create({name: 'player1'}, function(err, player) {
-         console.log('Created player >>>', player);
-       });
+    Agent.create({name: 'Mark'}, function(err, agent){
+      console.log('Created agent>>>', agent);
+      agent.stores.create([{
+        name: 'Store1',
+        customerId: customers[0].id
+      }, {
+        name: 'Store2',
+        customerId: customers[1].id
+      }, {
+        name: 'Store3',
+        customerId: customers[0].id
+      }], function(err, stores) {
+        console.log('Created store>>>', stores);
+        Store.create({name: 'MyStore'}, function(err, store) {
+            console.log('Created myStore>>>', store);
+        });
+        done();
+      })
     });
   });
+
 }

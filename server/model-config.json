@@ -32,15 +32,15 @@
     "dataSource": "db",
     "public": false
   },
-  "category": {
+  "store": {
     "dataSource": "db",
     "public": true
   },
-  "game": {
+  "customer": {
     "dataSource": "db",
     "public": true
   },
-  "player": {
+  "agent": {
     "dataSource": "db",
     "public": true
   }

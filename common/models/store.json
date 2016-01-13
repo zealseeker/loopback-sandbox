@@ -1,35 +1,28 @@
 {
-  "name": "game",
+  "name": "store",
   "base": "PersistedModel",
   "idInjection": true,
-  "scopes": {
-    "mature": {
-      "where": {
-        "mature": true
-      }
-    }
-  },
   "options": {
     "validateUpsert": true
   },
   "properties": {
+    "total": {
+      "type": "number"
+    },
     "name": {
       "type": "string"
-    },
-    "mature": {
-      "type": "boolean"
     }
   },
   "validations": [],
   "relations": {
-    "category": {
+    "agent": {
       "type": "belongsTo",
-      "model": "category",
+      "model": "agent",
       "foreignKey": ""
     },
-    "players": {
-      "type": "hasMany",
-      "model": "player",
+    "customer": {
+      "type": "belongsTo",
+      "model": "customer",
       "foreignKey": ""
     }
   },
