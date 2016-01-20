@@ -1,13 +1,19 @@
 {
-  "name": "appointment",
+  "name": "test",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "appointmentDate": {
-      "type": "date"
+    "name1": {
+      "type": "string"
+    },
+    "name2": {
+      "type": "string"
+    },
+    "name3": {
+      "type": "string"
     }
   },
   "validations": [],

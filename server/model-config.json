@@ -32,35 +32,7 @@
     "dataSource": "db",
     "public": false
   },
-  "patient": {
-    "dataSource": "db",
-    "public": true
-  },
-  "physician": {
-    "dataSource": "db",
-    "public": true
-  },
-  "appointment": {
-    "dataSource": "db",
-    "public": true
-  },
-  "space": {
-    "dataSource": "db",
-    "public": true
-  },
-  "account": {
-    "dataSource": "db",
-    "public": true
-  },
-  "customer": {
-    "dataSource": "db",
-    "public": true
-  },
-  "spaceCustomer": {
-    "dataSource": "db",
-    "public": true
-  },
-  "city": {
+  "test": {
     "dataSource": "db",
     "public": true
   }
