@@ -1,17 +1,21 @@
 {
-  "name": "sample",
+  "name": "loopback-sandbox",
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
+    "start": "node .",
     "pretest": "jshint ."
   },
   "dependencies": {
     "compression": "^1.0.3",
     "cors": "^2.5.2",
-    "loopback": "^2.22.0",
-    "loopback-boot": "^2.6.5",
+    "lodash": "^4.0.0",
+    "loopback": "^2.26.2",
+    "loopback-boot": "^2.16.0",
     "loopback-component-explorer": "^2.1.0",
-    "loopback-datasource-juggler": "^2.39.0",
+    "loopback-connector-postgresql": "^2.4.0",
+    "loopback-datasource-juggler": "^2.44.0",
+    "newrelic": "^1.25.0",
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
@@ -21,5 +25,5 @@
     "type": "",
     "url": ""
   },
-  "description": "sample"
+  "description": "loopback-sandbox"
 }

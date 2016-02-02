@@ -13,9 +13,6 @@
       "./mixins"
     ]
   },
-  "User": {
-    "dataSource": "db"
-  },
   "AccessToken": {
     "dataSource": "db",
     "public": false
@@ -32,15 +29,11 @@
     "dataSource": "db",
     "public": false
   },
-  "category": {
+  "user": {
     "dataSource": "db",
     "public": true
   },
-  "game": {
-    "dataSource": "db",
-    "public": true
-  },
-  "player": {
+  "Customer": {
     "dataSource": "db",
     "public": true
   }

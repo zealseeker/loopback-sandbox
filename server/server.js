@@ -1,7 +1,16 @@
+require('newrelic');
+
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
+
+app.use(loopback.context());
+app.use(loopback.token({
+  model: app.models.accessToken,
+  currentUserLiteral: 'me'
+}));
+
 
 app.start = function() {
   // start the web server
