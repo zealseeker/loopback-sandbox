@@ -32,16 +32,12 @@
     "dataSource": "db",
     "public": false
   },
-  "category": {
-    "dataSource": "db",
+  "daySlots": {
+    "dataSource": "mongo",
     "public": true
   },
-  "game": {
-    "dataSource": "db",
-    "public": true
-  },
-  "player": {
-    "dataSource": "db",
-    "public": true
+  "slot": {
+    "dataSource": "mongo",
+    "public": false
   }
 }

@@ -1,20 +1,28 @@
 {
-  "name": "player",
+  "name": "slot",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string"
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "start": {
+      "type": "date",
+      "required": true
+    },
+    "end": {
+      "type": "date"
     }
   },
   "validations": [],
   "relations": {
-    "game": {
+    "daySlots": {
       "type": "belongsTo",
-      "model": "game",
+      "model": "daySlots",
       "foreignKey": ""
     }
   },
