@@ -10,6 +10,7 @@
       "loopback/common/mixins",
       "loopback/server/mixins",
       "../common/mixins",
+      "../node_modules/loopback-ds-timestamp-mixin",
       "./mixins"
     ]
   },
@@ -32,16 +33,8 @@
     "dataSource": "db",
     "public": false
   },
-  "category": {
-    "dataSource": "db",
-    "public": true
-  },
-  "game": {
-    "dataSource": "db",
-    "public": true
-  },
-  "player": {
-    "dataSource": "db",
+  "Cart": {
+    "dataSource": "mydb",
     "public": true
   }
 }
