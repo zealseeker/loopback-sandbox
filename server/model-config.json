@@ -34,7 +34,7 @@
     "public": false
   },
   "Cart": {
-    "dataSource": "mydb",
+    "dataSource": "db",
     "public": true
   }
 }
