@@ -1,21 +1,17 @@
 {
-  "name": "player",
+  "name": "childone",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "name": {
-      "type": "string"
-    }
-  },
+  "properties": {},
   "validations": [],
   "relations": {
-    "game": {
+    "parent": {
       "type": "belongsTo",
-      "model": "game",
-      "foreignKey": ""
+      "model": "parent",
+      "foreignkey": ""
     }
   },
   "acls": [],

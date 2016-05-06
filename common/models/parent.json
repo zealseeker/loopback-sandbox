@@ -1,0 +1,27 @@
+{
+  "name": "parent",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "scope": {
+    "include": ["childones", "childtwos"]
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "childones": {
+      "type": "hasMany",
+      "model": "childone",
+      "foreignKey": ""
+    },
+    "childtwos": {
+      "type": "hasMany",
+      "model": "childtwo",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
