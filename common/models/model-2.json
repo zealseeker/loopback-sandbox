@@ -1,23 +1,19 @@
 {
-  "name": "category",
+  "name": "Model2",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string"
+    "created": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
     }
   },
   "validations": [],
-  "relations": {
-    "games": {
-      "type": "hasMany",
-      "model": "game",
-      "foreignKey": ""
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

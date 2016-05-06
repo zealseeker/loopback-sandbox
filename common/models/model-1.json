@@ -1,0 +1,31 @@
+{
+  "name": "Model1",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "lastMessage": {
+      "type": "object",
+      "required": true
+    },
+    "created": {
+      "type": "date",
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "_lastMessage": {
+      "type": "embedsOne",
+      "model": "Model2",
+      "property": "lastMessage",
+      "options": {
+        "persistent": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

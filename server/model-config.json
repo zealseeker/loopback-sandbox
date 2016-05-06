@@ -13,35 +13,15 @@
       "./mixins"
     ]
   },
-  "User": {
+  "note": {
     "dataSource": "db"
   },
-  "AccessToken": {
-    "dataSource": "db",
-    "public": false
-  },
-  "ACL": {
-    "dataSource": "db",
-    "public": false
-  },
-  "RoleMapping": {
-    "dataSource": "db",
-    "public": false
-  },
-  "Role": {
-    "dataSource": "db",
-    "public": false
-  },
-  "category": {
-    "dataSource": "db",
+  "Model1": {
+    "dataSource": "mongoDS",
     "public": true
   },
-  "game": {
-    "dataSource": "db",
-    "public": true
-  },
-  "player": {
-    "dataSource": "db",
+  "Model2": {
+    "dataSource": "mongoDS",
     "public": true
   }
 }
