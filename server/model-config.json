@@ -35,5 +35,11 @@
   "test": {
     "dataSource": "db",
     "public": true
+  },
+  "auser": {
+    "dataSource": "db",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }
